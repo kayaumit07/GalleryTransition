@@ -34,7 +34,10 @@ fun MainScreen() {
         mutableStateListOf(
             "https://www.arkasturizm.com/Content/images/Uploads/Resized/640-450/antalya-71715.jpg",
             "https://www.ozbilgsoft.com/wp-content/uploads/2021/04/antalya-web-tasarim.jpg",
-            "https://www.manzara.gen.tr/w1/Antalya-Kalei%C3%A7i-Liman.jpg"
+            "https://www.manzara.gen.tr/w1/Antalya-Kalei%C3%A7i-Liman.jpg",
+            "https://kulturveyasam.com/wp-content/uploads/2018/05/antalya_sahil_ilcesi-09-min.jpg",
+            "https://i.cnnturk.com/i/cnnturk/75/1200x675/611baec05cf3b019acee1e69.jpg",
+            "https://images.unsplash.com/photo-1582030826675-8b596001240a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YW50YWx5YSUyQyUyMHR1cmtleXxlbnwwfHwwfHw%3D&w=1000&q=80"
         )
     }
 
@@ -47,7 +50,7 @@ fun MainScreen() {
             val pageOffset = (pagerState.currentPage - index) + pagerState.currentPageOffsetFraction
             val imageSize by animateFloatAsState(
                 targetValue = if (pageOffset != 0.0f) 0.75f else 1.0f,
-                animationSpec = tween(300)
+                animationSpec = tween(500)
             )
 
             LaunchedEffect(key1 = imageSize) {
